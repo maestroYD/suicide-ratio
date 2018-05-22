@@ -14,6 +14,9 @@ from itsdangerous import (TimedJSONWebSignatureSerializer as Serializer)
 import dicttoxml
 from werkzeug.contrib.atom import AtomFeed
 import datetime
+import urllib.request
+import json
+from pymongo import MongoClient
 
 
 app = Flask(__name__)
@@ -70,13 +73,51 @@ class Country(Document):
 
 
 
-@app.route("/Creating", methods=['POST'])
+@app.route("/Countries", methods=['POST'])
 def save_information():
     parser = reqparse.RequestParser()
     parser.add_argument('country', type=str)
     args = parser.parse_args()
 
     country = args.get("country")
+
+    client = MongoClient('mongodb://ass3:123456@ds229290.mlab.com:29290/ass3')
+
+    db = client['ass3']
+    print(db.collection_names()) 
+    collection = db["country"]
+    # cursor = collection.find()
+    # for doc in cursor:
+    #     print(doc)
+
+    country_norm = country.replace(' ','').lower()
+
+    if collection.find({"name" : country_norm }).count():
+        for doc in collection.find({"name" : country_norm }):
+            return jsonify(doc), 200
+
+    #country name filter
+    #more to be done
+    if country.lower() in ["united states", "united states of america", "usa", "america", "us"]:
+        country_suicide = "unitedstatesofamerica"
+        country_education = "unitedstatesofamerica"
+        country_economy = "unitedstates"
+    elif country.lower() in ["russia", "russian federation"]:
+        country_suicide = "russianfederation"
+        country_education = "russianfederation"
+        country_economy = "russianfederation"
+    elif country.lower() in ["uk", "united kindom", "great britain"]:
+        country_suicide = "unitedkingdomofgreatbritainandnorthernireland"
+        country_education = "unitedkingdomofgreatbritainandnorthernireland"
+        country_economy = "unitedkingdomofgreatbritainandnorthernireland"
+    elif country.lower() in ["south korea", "democratic people's republic of korea"]:
+        country_suicide = "democraticpeople'srepublicofkorea"
+        country_education = "democraticpeople'srepublicofkorea"
+        country_economy = "democraticpeople'srepublicofkorea"
+    else:
+        country_suicide = country
+        country_education = country
+        country_economy = country
 
 
     if (os.path.isfile('suicide.csv') == False):
@@ -145,7 +186,7 @@ def save_information():
     reader_c = csv.reader(c)
     for line in reader_c:
         if len(line)!=0:
-            if line[0].replace(' ','').lower()==country.replace(' ','').lower():
+            if line[0].replace(' ','').lower()==country_suicide.replace(' ','').lower():
                 if line[2]=='Total':
                     flag_c=1
                     t1.append(suicide(int(line[1]),float(line[5])))
@@ -160,7 +201,7 @@ def save_information():
     reader_d = csv.reader(d)
     for line in reader_d:
         if len(line) != 0:
-            if line[0].replace(' ', '').lower() == country.replace(' ', '').lower():
+            if line[0].replace(' ', '').lower() == country_education.replace(' ', '').lower():
                 if line[2] == 'All genders':
                     flag_d=1
                     t2.append(education(int(line[1]), float(line[5])))
@@ -174,7 +215,7 @@ def save_information():
     reader_e = csv.reader(e)
     for line in reader_e:
         if len(line) != 0:
-            if line[0].replace(' ', '').lower() == country.replace(' ', '').lower():
+            if line[0].replace(' ', '').lower() == country_economy.replace(' ', '').lower():
                 flag_e = 1
                 t3.append(economy(int(line[1]), float(line[3])))
 
@@ -188,20 +229,17 @@ def save_information():
     return jsonify(country_id=country_id+1), 200
 
 
+#external api for country general information
+@app.route("/Countries/<country>", methods=['GET'])
+def search_country(country):
 
+    link = "https://restcountries.eu/rest/v2/name/" + country
 
+    with urllib.request.urlopen(link) as url:
+        data = json.loads(url.read().decode())
 
-
-
-
-
-
-
-
-
-
-
+    return jsonify(data), 200
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
