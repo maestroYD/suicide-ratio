@@ -1,5 +1,5 @@
 from mongoengine import connect
-from flask import Flask, request, jsonify, url_for
+from flask import Flask, request, jsonify,url_for
 from flask_restful import reqparse
 from mongoengine import FloatField, StringField, IntField, Document, EmbeddedDocument, ListField, EmbeddedDocumentField
 import requests
@@ -132,7 +132,7 @@ def save_information():
 
     country_id = 0
     for t in Country.objects:
-        if t.name == country.lower():
+        if t.name == country.replace(" ","").lower():
             flag = t.id
             return jsonify(country_id=flag), 202
         if t.id > country_id:
@@ -189,27 +189,19 @@ def save_information():
 
 
 
-@app.route("/country/<country>", methods=['GET'])
-def search_country():
-    parser = reqparse.RequestParser()
-    parser.add_argument("country", type=str)
-    args = parser.parse_args()
 
-    target_country = args.get("country")
 
-    return None
 
-@app.route("/reigion/<region>", methods=['GET'])
-def search_region():
-    parser = reqparse.RequestParser()
-    parser.add_argument("region", type=str)
-    args = parser.parse_args()
 
-    target_country = args.get("region")
 
-    return None
+
+
+
+
+
+
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
