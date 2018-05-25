@@ -157,7 +157,8 @@ def data_loading():
                                         "eco" : country_eco}
 
     country_id = 0
-    for country in country_list[0:4]:
+    #for country in country_list[0:4]:
+    for country in country_list:
 
         print("Now loading - ", country, "seq = ", country_id)
 
