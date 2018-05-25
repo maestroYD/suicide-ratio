@@ -17,9 +17,9 @@ import datetime
 import urllib.request
 import json
 from pymongo import MongoClient
-
 from bs4 import BeautifulSoup
 import urllib
+import numpy as np
 
 
 app = Flask(__name__)
@@ -66,52 +66,12 @@ class Country(Document):
         super().__init__(*args, **values)
         self.id = id
         self.name=name
-        self.suicide_collection = suicide_collection
+        self.suicide_collection=suicide_collection
         self.education_collection=education_collection
         self.economy_collection=economy_collection
 
 
 def data_loading():
-
-    #country is an dictionary
-
-    # client = MongoClient('mongodb://ass3:123456@ds229290.mlab.com:29290/ass3')
-
-    # db = client['ass3']
-    # print(db.collection_names()) 
-    # collection = db["country"]
-
-    # country_norm = country.replace(' ','').lower()
-
-    # if collection.find({"name" : country_norm }).count():
-    #     for doc in collection.find({"name" : country_norm }):
-    #         return jsonify(doc), 200
-
-    #country name filter
-    #more to be done
-    # if country.lower() in ["united states", "united states of america", "usa", "america", "us"]:
-    #     country_suicide = "unitedstatesofamerica"
-    #     country_education = "unitedstatesofamerica"
-    #     country_economy = "unitedstates"
-    # elif country.lower() in ["russia", "russian federation"]:
-    #     country_suicide = "russianfederation"
-    #     country_education = "russianfederation"
-    #     country_economy = "russianfederation"
-    # elif country.lower() in ["uk", "united kindom", "great britain"]:
-    #     country_suicide = "unitedkingdomofgreatbritainandnorthernireland"
-    #     country_education = "unitedkingdomofgreatbritainandnorthernireland"
-    #     country_economy = "unitedkingdomofgreatbritainandnorthernireland"
-    # elif country.lower() in ["south korea", "democratic people's republic of korea"]:
-    #     country_suicide = "democraticpeople'srepublicofkorea"
-    #     country_education = "democraticpeople'srepublicofkorea"
-    #     country_economy = "democraticpeople'srepublicofkorea"
-    # else:
-    #     country_suicide = country
-    #     country_education = country
-    #     country_economy = country
-
-    # for c in countries:
-    #     print(c.name)s
 
     #loading all country names
     country_list = []
@@ -135,6 +95,7 @@ def data_loading():
         if (os.path.isfile(filename)):
             os.remove(filename)
 
+
     #loading suicide data
     url = "http://data.un.org/Handlers/DownloadHandler.ashx?DataFilter=series:SH_STA_SCIDE&DataMartId=SDGs&Format=csv&c=2,3,5,11,13,14&s=ref_area_name:asc,time_period:desc"
     r = requests.get(url)
@@ -148,6 +109,7 @@ def data_loading():
         extracted_path = Path(zip_file.extract(names))
         extracted_path.rename("suicide.csv")
     zip_file.close()
+
 
     #loading education data
     url = "http://data.un.org/Handlers/DownloadHandler.ashx?DataFilter=series:GER_56;time_period:2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015&DataMartId=UNESCO&Format=csv&c=2,3,5,7,9,10&s=ref_area_name:asc,time_period:desc"
@@ -163,6 +125,7 @@ def data_loading():
         extracted_path.rename("education.csv")
     zip_file.close()
 
+
     #loading economy data
     url ="http://data.un.org/Handlers/DownloadHandler.ashx?DataFilter=grID:101;currID:USD;pcFlag:true;yr:2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015&DataMartId=SNAAMA&Format=csv&c=2,3,5,6&s=_crEngNameOrderBy:asc,yr:desc"
     r = requests.get(url)
@@ -177,22 +140,35 @@ def data_loading():
         extracted_path.rename("economy.csv")
     zip_file.close()
 
+
     #writing data to mongodb
     connect(
         host='mongodb://ass3:123456@ds229290.mlab.com:29290/ass3'
     )
 
+    country_dict = {}
+    country_dict_file = 'country_dict.txt'
+    with open(country_dict_file, "r") as f:
+        for line in f:
+            country_name, country_sui, country_edu, country_eco = line.split()
+            country_dict[country_name] = {"sui" : country_sui, \
+                                        "edu" : country_edu, \
+                                        "eco" : country_eco}
+
     country_id = 0
-    for country in country_list:
+    for country in country_list[0:4]:
 
         print("Now loading - ", country, "seq = ", country_id)
 
-        # for t in Country.objects:
-        #     if t.name == country.replace(" ","").lower():
-        #         flag = t.id
-        #         return jsonify(country_id=flag), 202
-        #     if t.id > country_id:
-        #         country_id = t.id
+        #country name normolization
+        if country in country_dict.keys():
+            country_sui = country_dict[country]["sui"]
+            country_edu = country_dict[country]["edu"]
+            country_eco = country_dict[country]["eco"]
+        else:
+            country_sui = country
+            country_edu = country
+            country_eco = country
 
         t1=[]
         flag_c=-1
@@ -200,7 +176,7 @@ def data_loading():
         reader_c = csv.reader(c)
         for line in reader_c:
             if len(line)!=0:
-                if line[0].replace(' ','').lower()==country:
+                if line[0].replace(' ','').lower()==country_sui:
                     if line[2]=='Total':
                         flag_c=1
                         t1.append(suicide(int(line[1]),float(line[5])))
@@ -214,7 +190,7 @@ def data_loading():
         reader_d = csv.reader(d)
         for line in reader_d:
             if len(line) != 0:
-                if line[0].replace(' ', '').lower() == country:
+                if line[0].replace(' ', '').lower() == country_edu:
                     if line[2] == 'All genders':
                         flag_d=1
                         t2.append(education(int(line[1]), float(line[5])))
@@ -228,7 +204,7 @@ def data_loading():
         reader_e = csv.reader(e)
         for line in reader_e:
             if len(line) != 0:
-                if line[0].replace(' ', '').lower() == country.replace(' ', '').lower():
+                if line[0].replace(' ', '').lower() == country_eco:
                     flag_e = 1
                     t3.append(economy(int(line[1]), float(line[3])))
 
@@ -241,14 +217,31 @@ def data_loading():
 
         country_id += 1
 
-        #return jsonify(country_id=country_id+1), 200
+
+#all data
+@app.route("/countries/<country_name>", methods=['GET'])
+def get_all(country_name):
+
+    client = MongoClient('mongodb://ass3:123456@ds229290.mlab.com:29290/ass3')
+
+    db = client['ass3']
+    # print(db.collection_names()) 
+    collection = db["country"]
+
+    country_norm = country_name.replace(' ','').lower()
+
+    if collection.find({"name" : country_norm }).count():
+        for doc in collection.find({"name" : country_norm }):
+            return jsonify(doc), 200
+    else:
+        return jsonify("Country doesn't exist"), 404
 
 
 #external api for country general information
-@app.route("/Countries/<country>", methods=['GET'])
-def search_country(country):
+@app.route("/countries/info/<country_name>", methods=['GET'])
+def search_country(country_name):
 
-    link = "https://restcountries.eu/rest/v2/name/" + country
+    link = "https://restcountries.eu/rest/v2/name/" + country_name
 
     with urllib.request.urlopen(link) as url:
         data = json.loads(url.read().decode())
@@ -256,6 +249,100 @@ def search_country(country):
     return jsonify(data), 200
 
 
+#suicide data
+@app.route("/countries/suicide/<country_name>", methods=['GET'])
+def get_suicide(country_name):
+
+    client = MongoClient('mongodb://ass3:123456@ds229290.mlab.com:29290/ass3')
+
+    db = client['ass3']
+    # print(db.collection_names()) 
+    collection = db["country"]
+
+    country_norm = country_name.replace(' ','').lower()
+
+    if collection.find({"name" : country_norm }).count():
+        for doc in collection.find({"name" : country_norm }):
+            return jsonify(doc["suicide_collection"]), 200
+    else:
+        return jsonify("Country doesn't exist"), 404
+
+#education data
+@app.route("/countries/education/<country_name>", methods=['GET'])
+def get_education(country_name):
+
+    client = MongoClient('mongodb://ass3:123456@ds229290.mlab.com:29290/ass3')
+
+    db = client['ass3']
+    # print(db.collection_names()) 
+    collection = db["country"]
+
+    country_norm = country_name.replace(' ','').lower()
+
+    if collection.find({"name" : country_norm }).count():
+        for doc in collection.find({"name" : country_norm }):
+            return jsonify(doc["education_collection"]), 200
+    else:
+        return jsonify("Country doesn't exist"), 404
+
+#economy data
+@app.route("/countries/economy/<country_name>", methods=['GET'])
+def get_economy(country_name):
+
+    client = MongoClient('mongodb://ass3:123456@ds229290.mlab.com:29290/ass3')
+
+    db = client['ass3']
+    # print(db.collection_names()) 
+    collection = db["country"]
+
+    country_norm = country_name.replace(' ','').lower()
+
+    if collection.find({"name" : country_norm }).count():
+        for doc in collection.find({"name" : country_norm }):
+            return jsonify(doc["economy_collection"]), 200
+    else:
+        return jsonify("Country doesn't exist"), 404
+
+#analysis part
+@app.route("/countries/analysis/<country_name>", methods=['GET'])
+def get_analyze(country_name):
+
+    connect(
+        host='mongodb://ass3:123456@ds229290.mlab.com:29290/ass3'
+    )
+
+    return_dict={}
+    sum=0
+    s_list=[]
+    e_list=[]
+    eco_list=[]
+    for t in Country.objects():
+        if t.name==country_name:
+
+            for s in t.suicide_collection:
+                sum+=s.value
+                s_list.append(s.value)
+
+            for e in t.education_collection:
+                if e.year==2014 or e.year==2010 or e.year==2005 or e.year==2000:
+                    e_list.append(e.value)
+
+            for eco in t.economy_collection:
+                if eco.year==2015 or eco.year==2010 or eco.year==2005 or eco.year==2000:
+                    eco_list.append(eco.value)
+
+    s_e=np.cov(s_list,e_list)[0][1]
+    s_eco=np.cov(s_list,eco_list)[0][1]
+    s_ave=sum/4
+
+    return_dict["Country name"]=country_name
+    return_dict["average suicide rate"]=s_ave
+    return_dict["Correlation between suicide and education"]=s_e
+    return_dict["Correlation between suicide and economy"]=s_eco
+
+    return jsonify(return_dict), 200
+
+
 if __name__ == '__main__':
     data_loading()
-    app.run(debug=False)
+    app.run(debug=True)
