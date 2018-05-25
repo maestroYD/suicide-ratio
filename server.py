@@ -313,6 +313,45 @@ def search_country(country):
     return jsonify(data), 200
 
 
+@app.route("/get_analyze/<country_name>", methods=['GET'])
+def get_analyze(country_name):
+    connect(
+        host='mongodb://ass3:123456@ds229290.mlab.com:29290/ass3'
+    )
+
+    return_dict={}
+    sum=0
+    s_list=[]
+    e_list=[]
+    eco_list=[]
+    for t in Country.objects():
+        if t.name==country_name:
+
+            for s in t.suicide_collection:
+                sum+=s.value
+                s_list.append(s.value)
+
+            for e in t.education_collection:
+                if e.year==2014 or e.year==2010 or e.year==2005 or e.year==2000:
+                    e_list.append(e.value)
+
+            for eco in t.economy_collection:
+                if eco.year==2015 or eco.year==2010 or eco.year==2005 or eco.year==2000:
+                    eco_list.append(eco.value)
+
+    s_e=np.cov(s_list,e_list)[0][1]
+    s_eco=np.cov(s_list,eco_list)[0][1]
+    s_ave=sum/4
+
+    return_dict["Country name"]=country_name
+    return_dict["average suicide rate"]=s_ave
+    return_dict["Correlation between suicide and education"]=s_e
+    return_dict["Correlation between suicide and economy"]=s_eco
+
+    return jsonify(return_dict), 200
+
+
+
 if __name__ == '__main__':
     data_loading()
     app.run(debug=False)
