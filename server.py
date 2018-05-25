@@ -14,19 +14,12 @@ from itsdangerous import (TimedJSONWebSignatureSerializer as Serializer)
 import dicttoxml
 from werkzeug.contrib.atom import AtomFeed
 import datetime
-<<<<<<< HEAD
 import numpy as np
-=======
 import urllib.request
 import json
 from pymongo import MongoClient
 from bs4 import BeautifulSoup
 import urllib
-<<<<<<< HEAD
-import numpy as np
-=======
->>>>>>> 9ac34c8b332a1288bd09f1ad2dd1c3f4701e5384
->>>>>>> 35e189dc16fd14b23058e5cdf8f9ade1f918eb52
 
 
 app = Flask(__name__)
@@ -51,6 +44,7 @@ class education(EmbeddedDocument):
         super().__init__(*args, **kwargs)
         self.year = year
         self.value = value
+
 
 class economy(EmbeddedDocument):
     year = IntField(required=True, primary_key=True)
@@ -220,63 +214,6 @@ def data_loading():
 
         t=Country(country_id+1, country, t1, t2, t3)
 
-<<<<<<< HEAD
-############changed new################
-@app.route("/get_analyze/<country_name>", methods=['GET'])
-def get_analyze(country_name):
-    connect(
-        host='mongodb://ass3:123456@ds229290.mlab.com:29290/ass3'
-    )
-
-    return_dict={}
-    sum=0
-    s_list=[]
-    e_list=[]
-    eco_list=[]
-    for t in Country.objects():
-        if t.name==country_name:
-
-            for s in t.suicide_collection:
-                sum+=s.value
-                s_list.append(s.value)
-
-            for e in t.education_collection:
-                if e.year==2014 or e.year==2010 or e.year==2005 or e.year==2000:
-                    e_list.append(e.value)
-
-            for eco in t.economy_collection:
-                if eco.year==2015 or eco.year==2010 or eco.year==2005 or eco.year==2000:
-                    eco_list.append(eco.value)
-
-    s_e=np.cov(s_list,e_list)[0][1]
-    s_eco=np.cov(s_list,eco_list)[0][1]
-    s_ave=sum/4
-
-    return_dict["Country name"]=country_name
-    return_dict["average suicide rate"]=s_ave
-    return_dict["Correlation between suicide and education"]=s_e
-    return_dict["Correlation between suicide and economy"]=s_eco
-
-    return jsonify(return_dict), 200
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-        t.save()
->>>>>>> 9ac34c8b332a1288bd09f1ad2dd1c3f4701e5384
-
-        country_id += 1
-
 
 #all data
 @app.route("/countries/<country_name>", methods=['GET'])
@@ -309,7 +246,6 @@ def search_country(country_name):
     return jsonify(data), 200
 
 
-<<<<<<< HEAD
 #suicide data
 @app.route("/countries/suicide/<country_name>", methods=['GET'])
 def get_suicide(country_name):
@@ -346,6 +282,7 @@ def get_education(country_name):
     else:
         return jsonify("Country doesn't exist"), 404
 
+
 #economy data
 @app.route("/countries/economy/<country_name>", methods=['GET'])
 def get_economy(country_name):
@@ -364,14 +301,11 @@ def get_economy(country_name):
     else:
         return jsonify("Country doesn't exist"), 404
 
+
 #analysis part
 @app.route("/countries/analysis/<country_name>", methods=['GET'])
 def get_analyze(country_name):
 
-=======
-@app.route("/get_analyze/<country_name>", methods=['GET'])
-def get_analyze(country_name):
->>>>>>> 35e189dc16fd14b23058e5cdf8f9ade1f918eb52
     connect(
         host='mongodb://ass3:123456@ds229290.mlab.com:29290/ass3'
     )
@@ -407,11 +341,6 @@ def get_analyze(country_name):
 
     return jsonify(return_dict), 200
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 35e189dc16fd14b23058e5cdf8f9ade1f918eb52
 if __name__ == '__main__':
     data_loading()
-    app.run(debug=True)
+    app.run(debug=False)
