@@ -14,6 +14,7 @@ from itsdangerous import (TimedJSONWebSignatureSerializer as Serializer)
 import dicttoxml
 from werkzeug.contrib.atom import AtomFeed
 import datetime
+from flask_cors import CORS
 import numpy as np
 import urllib.request
 import json
@@ -23,6 +24,7 @@ import urllib
 
 
 app = Flask(__name__)
+CORS(app)
 
 
 class suicide(EmbeddedDocument):
