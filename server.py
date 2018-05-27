@@ -185,8 +185,8 @@ def data_loading():
                         flag_c=1
                         t1.append(suicide(int(line[1]),float(line[5])))
 
-        if flag_c==-1:
-            print("suicide data not found for ", country)
+        # if flag_c==-1:
+        #     print("suicide data not found for ", country)
 
         t2 = []
         flag_d=-1
@@ -199,8 +199,8 @@ def data_loading():
                         flag_d=1
                         t2.append(education(int(line[1]), float(line[5])))
 
-        if flag_d==-1:
-            print("education data not found for ", country)
+        # if flag_d==-1:
+        #     print("education data not found for ", country)
 
         t3 = []
         flag_e = -1
@@ -212,8 +212,8 @@ def data_loading():
                     flag_e = 1
                     t3.append(economy(int(line[1]), float(line[3])))
 
-        if flag_e == -1:
-            print("economy data not found for ", country)
+        # if flag_e == -1:
+        #     print("economy data not found for ", country)
 
         t=Country(country_id, country, t1, t2, t3)
 
@@ -223,10 +223,34 @@ def data_loading():
 
 
 #whole db data
+@app.route("/countries/worldwide", methods=['GET'])
+def get_all():
+
+    connect(
+        host='mongodb://ass3:123456@ds229290.mlab.com:29290/ass3'
+    )
+
+    result = []
+    return_dict={}
+
+    for t in Country.objects():
+        sum=0
+        for s in t.suicide_collection:
+            sum+=s.value
+            
+        s_ave=sum/4
+
+        return_dict[t.id] = {}
+
+        return_dict[t.id]["id"]=t.name
+        return_dict[t.id]["avgration"]=s_ave
+
+    result = list(return_dict.values())
+    return jsonify(result), 200
 
 #all data per country
 @app.route("/countries/<country_name>", methods=['GET'])
-def get_all(country_name):
+def get_all_by_country(country_name):
 
     client = MongoClient('mongodb://ass3:123456@ds229290.mlab.com:29290/ass3')
 
