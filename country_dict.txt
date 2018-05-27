@@ -18,7 +18,7 @@ capeverde caboverde capeverde caboverde
 caribbeannetherlands x x x
 caymanislands x x caymanislands
 ceuta&melilla x x x
-china china,people'srepublicof china china
+china china china china,people'srepublicof
 christmasisland x x x
 clippertonisland x x x
 cocos(keeling)islands x x x

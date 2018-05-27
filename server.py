@@ -142,11 +142,6 @@ def data_loading():
     zip_file.close()
 
 
-    #writing data to mongodb
-    connect(
-        host='mongodb://ass3:123456@ds229290.mlab.com:29290/ass3'
-    )
-
     country_dict = {}
     country_dict_file = 'country_dict.txt'
     with open(country_dict_file, "r") as f:
@@ -156,11 +151,18 @@ def data_loading():
                                         "edu" : country_edu, \
                                         "eco" : country_eco}
 
-    country_id = 0
-    #for country in country_list[0:4]:
+    #writing data to mongodb
+
+    connect(
+        host='mongodb://ass3:123456@ds229290.mlab.com:29290/ass3'
+    )
+
+    country_id = 1
+
+    # for country in country_list[0:4]:
     for country in country_list:
 
-        print("Now loading - ", country, "seq = ", country_id)
+        # print("Now loading - ", country, "seq = ", country_id)
 
         #country name normolization
         if country in country_dict.keys():
@@ -213,10 +215,16 @@ def data_loading():
         if flag_e == -1:
             print("economy data not found for ", country)
 
-        t=Country(country_id+1, country, t1, t2, t3)
+        t=Country(country_id, country, t1, t2, t3)
+
+        t.save()
+
+        country_id += 1
 
 
-#all data
+#whole db data
+
+#all data per country
 @app.route("/countries/<country_name>", methods=['GET'])
 def get_all(country_name):
 
