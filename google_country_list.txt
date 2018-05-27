@@ -1,256 +1,256 @@
-afghanistan	Afghanistan
-albania	Albania
-algeria	Algeria
-americansamoa	American Samoa
-andorra	Andorra
-angola	Angola
-anguilla	Anguilla
-antarctica	Antarctica
-antigua&barbuda	Antigua & Barbuda
-argentina	Argentina
-armenia	Armenia
-aruba	Aruba
-ascensionisland	Ascension Island
-australia	Australia
-austria	Austria
-azerbaijan	Azerbaijan
-bahamas	Bahamas
-bahrain	Bahrain
-bangladesh	Bangladesh
-barbados	Barbados
-belarus	Belarus
-belgium	Belgium
-belize	Belize
-benin	Benin
-bermuda	Bermuda
-bhutan	Bhutan
-bolivia	Bolivia
-bosnia&herzegovina	Bosnia & Herzegovina
-botswana	Botswana
-bouvetisland	Bouvet Island
-brazil	Brazil
-britishindianoceanterritory	British Indian Ocean Territory
-britishvirginislands	British Virgin Islands
-brunei	Brunei
-bulgaria	Bulgaria
-burkinafaso	Burkina Faso
-burundi	Burundi
-cambodia	Cambodia
-cameroon	Cameroon
-canada	Canada
-canaryislands	Canary Islands
-capeverde	Cape Verde
-caribbeannetherlands	Caribbean Netherlands
-caymanislands	Cayman Islands
-centralafricanrepublic	Central African Republic
-ceuta&melilla	Ceuta & Melilla
-chad	Chad
-chile	Chile
-china	China
-christmasisland	Christmas Island
-clippertonisland	Clipperton Island
-cocos(keeling)islands	Cocos (Keeling) Islands
-colombia	Colombia
-comoros	Comoros
-congo-brazzaville	Congo - Brazzaville
-congo-kinshasa	Congo - Kinshasa
-cookislands	Cook Islands
-costarica	Costa Rica
-croatia	Croatia
-cuba	Cuba
-curaçao	Curaçao
-cyprus	Cyprus
-czechia	Czechia
-côted’ivoire	Côte d’Ivoire
-denmark	Denmark
-diegogarcia	Diego Garcia
-djibouti	Djibouti
-dominica	Dominica
-dominicanrepublic	Dominican Republic
-ecuador	Ecuador
-egypt	Egypt
-elsalvador	El Salvador
-equatorialguinea	Equatorial Guinea
-eritrea	Eritrea
-estonia	Estonia
-ethiopia	Ethiopia
-falklandislands(islasmalvinas)	Falkland Islands (Islas Malvinas)
-faroeislands	Faroe Islands
-fiji	Fiji
-finland	Finland
-france	France
-frenchguiana	French Guiana
-frenchpolynesia	French Polynesia
-frenchsouthernterritories	French Southern Territories
-gabon	Gabon
-gambia	Gambia
-georgia	Georgia
-germany	Germany
-ghana	Ghana
-gibraltar	Gibraltar
-greece	Greece
-greenland	Greenland
-grenada	Grenada
-guadeloupe	Guadeloupe
-guam	Guam
-guatemala	Guatemala
-guernsey	Guernsey
-guinea	Guinea
-guinea-bissau	Guinea-Bissau
-guyana	Guyana
-haiti	Haiti
-heard&mcdonaldislands	Heard & McDonald Islands
-honduras	Honduras
-hongkong	Hong Kong
-hungary	Hungary
-iceland	Iceland
-india	India
-indonesia	Indonesia
-iran	Iran
-iraq	Iraq
-ireland	Ireland
-isleofman	Isle of Man
-israel	Israel
-italy	Italy
-jamaica	Jamaica
-japan	Japan
-jersey	Jersey
-jordan	Jordan
-kazakhstan	Kazakhstan
-kenya	Kenya
-kiribati	Kiribati
-kosovo	Kosovo
-kuwait	Kuwait
-kyrgyzstan	Kyrgyzstan
-laos	Laos
-latvia	Latvia
-lebanon	Lebanon
-lesotho	Lesotho
-liberia	Liberia
-libya	Libya
-liechtenstein	Liechtenstein
-lithuania	Lithuania
-luxembourg	Luxembourg
-macau	Macau
-macedonia(fyrom)	Macedonia (FYROM)
-madagascar	Madagascar
-malawi	Malawi
-malaysia	Malaysia
-maldives	Maldives
-mali	Mali
-malta	Malta
-marshallislands	Marshall Islands
-martinique	Martinique
-mauritania	Mauritania
-mauritius	Mauritius
-mayotte	Mayotte
-mexico	Mexico
-micronesia	Micronesia
-moldova	Moldova
-monaco	Monaco
-mongolia	Mongolia
-montenegro	Montenegro
-montserrat	Montserrat
-morocco	Morocco
-mozambique	Mozambique
-myanmar(burma)	Myanmar (Burma)
-namibia	Namibia
-nauru	Nauru
-nepal	Nepal
-netherlands	Netherlands
-newcaledonia	New Caledonia
-newzealand	New Zealand
-nicaragua	Nicaragua
-niger	Niger
-nigeria	Nigeria
-niue	Niue
-norfolkisland	Norfolk Island
-northkorea	North Korea
-northernmarianaislands	Northern Mariana Islands
-norway	Norway
-oman	Oman
-pakistan	Pakistan
-palau	Palau
-palestine	Palestine
-panama	Panama
-papuanewguinea	Papua New Guinea
-paraguay	Paraguay
-peru	Peru
-philippines	Philippines
-pitcairnislands	Pitcairn Islands
-poland	Poland
-portugal	Portugal
-puertorico	Puerto Rico
-qatar	Qatar
-romania	Romania
-russia	Russia
-rwanda	Rwanda
-réunion	Réunion
-samoa	Samoa
-sanmarino	San Marino
-saudiarabia	Saudi Arabia
-senegal	Senegal
-serbia	Serbia
-seychelles	Seychelles
-sierraleone	Sierra Leone
-singapore	Singapore
-sintmaarten	Sint Maarten
-slovakia	Slovakia
-slovenia	Slovenia
-solomonislands	Solomon Islands
-somalia	Somalia
-southafrica	South Africa
-southgeorgia&southsandwichislands	South Georgia & South Sandwich Islands
-southkorea	South Korea
-southsudan	South Sudan
-spain	Spain
-srilanka	Sri Lanka
-st.barthélemy	St. Barthélemy
-st.helena	St. Helena
-st.kitts&nevis	St. Kitts & Nevis
-st.lucia	St. Lucia
-st.martin	St. Martin
-st.pierre&miquelon	St. Pierre & Miquelon
-st.vincent&grenadines	St. Vincent & Grenadines
-sudan	Sudan
-suriname	Suriname
-svalbard&janmayen	Svalbard & Jan Mayen
-swaziland	Swaziland
-sweden	Sweden
-switzerland	Switzerland
-syria	Syria
-sãotomé&príncipe	São Tomé & Príncipe
-taiwan	Taiwan
-tajikistan	Tajikistan
-tanzania	Tanzania
-thailand	Thailand
-timor-leste	Timor-Leste
-togo	Togo
-tokelau	Tokelau
-tonga	Tonga
-trinidad&tobago	Trinidad & Tobago
-tristandacunha	Tristan da Cunha
-tunisia	Tunisia
-turkey	Turkey
-turkmenistan	Turkmenistan
-turks&caicosislands	Turks & Caicos Islands
-tuvalu	Tuvalu
-u.s.outlyingislands	U.S. Outlying Islands
-u.s.virginislands	U.S. Virgin Islands
-uganda	Uganda
-ukraine	Ukraine
-unitedarabemirates	United Arab Emirates
-unitedkingdom	United Kingdom
-unitedstates	United States
-uruguay	Uruguay
-uzbekistan	Uzbekistan
-vanuatu	Vanuatu
-vaticancity	Vatican City
-venezuela	Venezuela
-vietnam	Vietnam
-wallis&futuna	Wallis & Futuna
-westernsahara	Western Sahara
-yemen	Yemen
-zambia	Zambia
-zimbabwe	Zimbabwe
-ålandislands	Åland Islands
+afghanistan	Afghanistan	AF
+albania	Albania	AL
+algeria	Algeria	DZ
+americansamoa	American Samoa	AS
+andorra	Andorra	AD
+angola	Angola	AO
+anguilla	Anguilla	AI
+antarctica	Antarctica	AQ
+antigua&barbuda	Antigua & Barbuda	AG
+argentina	Argentina	AR
+armenia	Armenia	AM
+aruba	Aruba	AW
+ascensionisland	Ascension Island	AC
+australia	Australia	AU
+austria	Austria	AT
+azerbaijan	Azerbaijan	AZ
+bahamas	Bahamas	BS
+bahrain	Bahrain	BH
+bangladesh	Bangladesh	BD
+barbados	Barbados	BB
+belarus	Belarus	BY
+belgium	Belgium	BE
+belize	Belize	BZ
+benin	Benin	BJ
+bermuda	Bermuda	BM
+bhutan	Bhutan	BT
+bolivia	Bolivia	BO
+bosnia&herzegovina	Bosnia & Herzegovina	BA
+botswana	Botswana	BW
+bouvetisland	Bouvet Island	BV
+brazil	Brazil	BR
+britishindianoceanterritory	British Indian Ocean Territory	IO
+britishvirginislands	British Virgin Islands	VG
+brunei	Brunei	BN
+bulgaria	Bulgaria	BG
+burkinafaso	Burkina Faso	BF
+burundi	Burundi	BI
+cambodia	Cambodia	KH
+cameroon	Cameroon	CM
+canada	Canada	CA
+canaryislands	Canary Islands	IC
+capeverde	Cape Verde	CV
+caribbeannetherlands	Caribbean Netherlands	BQ
+caymanislands	Cayman Islands	KY
+centralafricanrepublic	Central African Republic	CF
+ceuta&melilla	Ceuta & Melilla	EA
+chad	Chad	TD
+chile	Chile	CL
+china	China	CN
+christmasisland	Christmas Island	CX
+clippertonisland	Clipperton Island	CP
+cocos(keeling)islands	Cocos (Keeling) Islands	CC
+colombia	Colombia	CO
+comoros	Comoros	KM
+congo-brazzaville	Congo - Brazzaville	CG
+congo-kinshasa	Congo - Kinshasa	CD
+cookislands	Cook Islands	CK
+costarica	Costa Rica	CR
+croatia	Croatia	HR
+cuba	Cuba	CU
+curaçao	Curaçao	CW
+cyprus	Cyprus	CY
+czechia	Czechia	CZ
+côted’ivoire	Côte d’Ivoire	CI
+denmark	Denmark	DK
+diegogarcia	Diego Garcia	DG
+djibouti	Djibouti	DJ
+dominica	Dominica	DM
+dominicanrepublic	Dominican Republic	DO
+ecuador	Ecuador	EC
+egypt	Egypt	EG
+elsalvador	El Salvador	SV
+equatorialguinea	Equatorial Guinea	GQ
+eritrea	Eritrea	ER
+estonia	Estonia	EE
+ethiopia	Ethiopia	ET
+falklandislands(islasmalvinas)	Falkland Islands (Islas Malvinas)	FK
+faroeislands	Faroe Islands	FO
+fiji	Fiji	FJ
+finland	Finland	FI
+france	France	FR
+frenchguiana	French Guiana	GF
+frenchpolynesia	French Polynesia	PF
+frenchsouthernterritories	French Southern Territories	TF
+gabon	Gabon	GA
+gambia	Gambia	GM
+georgia	Georgia	GE
+germany	Germany	DE
+ghana	Ghana	GH
+gibraltar	Gibraltar	GI
+greece	Greece	GR
+greenland	Greenland	GL
+grenada	Grenada	GD
+guadeloupe	Guadeloupe	GP
+guam	Guam	GU
+guatemala	Guatemala	GT
+guernsey	Guernsey	GG
+guinea	Guinea	GN
+guinea-bissau	Guinea-Bissau	GW
+guyana	Guyana	GY
+haiti	Haiti	HT
+heard&mcdonaldislands	Heard & McDonald Islands	HM
+honduras	Honduras	HN
+hongkong	Hong Kong	HK
+hungary	Hungary	HU
+iceland	Iceland	IS
+india	India	IN
+indonesia	Indonesia	ID
+iran	Iran	IR
+iraq	Iraq	IQ
+ireland	Ireland	IE
+isleofman	Isle of Man	IM
+israel	Israel	IL
+italy	Italy	IT
+jamaica	Jamaica	JM
+japan	Japan	JP
+jersey	Jersey	JE
+jordan	Jordan	JO
+kazakhstan	Kazakhstan	KZ
+kenya	Kenya	KE
+kiribati	Kiribati	KI
+kosovo	Kosovo	XK
+kuwait	Kuwait	KW
+kyrgyzstan	Kyrgyzstan	KG
+laos	Laos	LA
+latvia	Latvia	LV
+lebanon	Lebanon	LB
+lesotho	Lesotho	LS
+liberia	Liberia	LR
+libya	Libya	LY
+liechtenstein	Liechtenstein	LI
+lithuania	Lithuania	LT
+luxembourg	Luxembourg	LU
+macau	Macau	MO
+macedonia(fyrom)	Macedonia (FYROM)	MK
+madagascar	Madagascar	MG
+malawi	Malawi	MW
+malaysia	Malaysia	MY
+maldives	Maldives	MV
+mali	Mali	ML
+malta	Malta	MT
+marshallislands	Marshall Islands	MH
+martinique	Martinique	MQ
+mauritania	Mauritania	MR
+mauritius	Mauritius	MU
+mayotte	Mayotte	YT
+mexico	Mexico	MX
+micronesia	Micronesia	FM
+moldova	Moldova	MD
+monaco	Monaco	MC
+mongolia	Mongolia	MN
+montenegro	Montenegro	ME
+montserrat	Montserrat	MS
+morocco	Morocco	MA
+mozambique	Mozambique	MZ
+myanmar(burma)	Myanmar (Burma)	MM
+namibia	Namibia	NA
+nauru	Nauru	NR
+nepal	Nepal	NP
+netherlands	Netherlands	NL
+newcaledonia	New Caledonia	NC
+newzealand	New Zealand	NZ
+nicaragua	Nicaragua	NI
+niger	Niger	NE
+nigeria	Nigeria	NG
+niue	Niue	NU
+norfolkisland	Norfolk Island	NF
+northkorea	North Korea	KP
+northernmarianaislands	Northern Mariana Islands	MP
+norway	Norway	NO
+oman	Oman	OM
+pakistan	Pakistan	PK
+palau	Palau	PW
+palestine	Palestine	PS
+panama	Panama	PA
+papuanewguinea	Papua New Guinea	PG
+paraguay	Paraguay	PY
+peru	Peru	PE
+philippines	Philippines	PH
+pitcairnislands	Pitcairn Islands	PN
+poland	Poland	PL
+portugal	Portugal	PT
+puertorico	Puerto Rico	PR
+qatar	Qatar	QA
+romania	Romania	RO
+russia	Russia	RU
+rwanda	Rwanda	RW
+réunion	Réunion	RE
+samoa	Samoa	WS
+sanmarino	San Marino	SM
+saudiarabia	Saudi Arabia	SA
+senegal	Senegal	SN
+serbia	Serbia	RS
+seychelles	Seychelles	SC
+sierraleone	Sierra Leone	SL
+singapore	Singapore	SG
+sintmaarten	Sint Maarten	SX
+slovakia	Slovakia	SK
+slovenia	Slovenia	SI
+solomonislands	Solomon Islands	SB
+somalia	Somalia	SO
+southafrica	South Africa	ZA
+southgeorgia&southsandwichislands	South Georgia & South Sandwich Islands	GS
+southkorea	South Korea	KR
+southsudan	South Sudan	SS
+spain	Spain	ES
+srilanka	Sri Lanka	LK
+st.barthélemy	St. Barthélemy	BL
+st.helena	St. Helena	SH
+st.kitts&nevis	St. Kitts & Nevis	KN
+st.lucia	St. Lucia	LC
+st.martin	St. Martin	MF
+st.pierre&miquelon	St. Pierre & Miquelon	PM
+st.vincent&grenadines	St. Vincent & Grenadines	VC
+sudan	Sudan	SD
+suriname	Suriname	SR
+svalbard&janmayen	Svalbard & Jan Mayen	SJ
+swaziland	Swaziland	SZ
+sweden	Sweden	SE
+switzerland	Switzerland	CH
+syria	Syria	SY
+sãotomé&príncipe	São Tomé & Príncipe	ST
+taiwan	Taiwan	TW
+tajikistan	Tajikistan	TJ
+tanzania	Tanzania	TZ
+thailand	Thailand	TH
+timor-leste	Timor-Leste	TL
+togo	Togo	TG
+tokelau	Tokelau	TK
+tonga	Tonga	TO
+trinidad&tobago	Trinidad & Tobago	TT
+tristandacunha	Tristan da Cunha	TA
+tunisia	Tunisia	TN
+turkey	Turkey	TR
+turkmenistan	Turkmenistan	TM
+turks&caicosislands	Turks & Caicos Islands	TC
+tuvalu	Tuvalu	TV
+u.s.outlyingislands	U.S. Outlying Islands	UM
+u.s.virginislands	U.S. Virgin Islands	VI
+uganda	Uganda	UG
+ukraine	Ukraine	UA
+unitedarabemirates	United Arab Emirates	AE
+unitedkingdom	United Kingdom	GB
+unitedstates	United States	US
+uruguay	Uruguay	UY
+uzbekistan	Uzbekistan	UZ
+vanuatu	Vanuatu	VU
+vaticancity	Vatican City	VA
+venezuela	Venezuela	VE
+vietnam	Vietnam	VN
+wallis&futuna	Wallis & Futuna	WF
+westernsahara	Western Sahara	EH
+yemen	Yemen	YE
+zambia	Zambia	ZM
+zimbabwe	Zimbabwe	ZW
+ålandislands	Åland Islands	AX
