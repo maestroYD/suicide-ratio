@@ -226,6 +226,13 @@ def data_loading():
 @app.route("/countries/worldwide", methods=['GET'])
 def get_all():
 
+    country_refer = {}
+    country_refer_file = 'google_country_list.txt'
+    with open(country_refer_file, "r") as f:
+        for line in f:
+            country_name, return_name = line.split("\t")
+            country_refer[country_name] = return_name[0:-1]
+
     connect(
         host='mongodb://ass3:123456@ds229290.mlab.com:29290/ass3'
     )
@@ -242,7 +249,7 @@ def get_all():
 
         return_dict[t.id] = {}
 
-        return_dict[t.id]["id"]=t.name
+        return_dict[t.id]["id"]=country_refer[t.name]
         return_dict[t.id]["avgration"]=s_ave
 
     result = list(return_dict.values())
