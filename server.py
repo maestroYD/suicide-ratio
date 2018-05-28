@@ -391,6 +391,7 @@ def get_analyze(country_name):
 def get_area():
 
     country_list = request.args.get("country_list")[1:-1].split(", ")
+    print(country_list)
     country_list_clean = []
 
     for i in country_list:
@@ -481,5 +482,5 @@ def get_area():
     return jsonify(result), 200
 
 if __name__ == '__main__':
-    data_loading()
+    #data_loading()
     app.run(debug=False)

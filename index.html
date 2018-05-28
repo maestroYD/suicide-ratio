@@ -189,6 +189,15 @@ anychart.onDocumentReady(function() {
         countries.push(dataSet.Xb[selected[i]].name)
       }
       console.log(countries)
+      const url = new URL('http://localhost:5000/countries/analysis/area'),
+                  params = {'country_list': countries}
+      Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))            
+      fetch(url, {
+        method: 'GET',
+      }).then(response => response.json())
+        .then(data => {
+          console.log(data)
+        })
       var chart_4 = anychart.column([
         ["January", 10000],
         ["February", 12000],
