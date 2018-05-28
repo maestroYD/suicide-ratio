@@ -417,10 +417,18 @@ def get_area():
             for doc in collection.find({"name" : country_norm }):
                 edu_sum = []
                 eco_sum = []
-                for item in doc["education_collection"]:
-                    edu_sum.append(item["value"])
-                for item in doc["economy_collection"]:
-                    eco_sum.append(item["value"])
+                try:
+                    for item in doc["education_collection"]:
+                        edu_sum.append(item["value"])
+                except:
+                    continue
+
+                try:
+                    for item in doc["economy_collection"]:
+                        eco_sum.append(item["value"])
+                except:
+                    continue
+                    
             return_dict[c]["name"] = c
 
             if len(edu_sum) == 0:
@@ -476,5 +484,5 @@ def get_area():
     return jsonify(result), 200
 
 if __name__ == '__main__':
-    #data_loading()
+    data_loading()
     app.run(debug=False)
