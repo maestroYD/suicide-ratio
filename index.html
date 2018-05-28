@@ -36,30 +36,74 @@ anychart.onDocumentReady(function() {
 
     var map = anychart.map();
 
+    var getMin = (suicide_data) => {
+        return suicide_data.reduce((min, p) => p.y < min ? p.y : min, data[0].y);
+    }
+
+
     // get suicide rate
     var func_listen = function(e){
-        console.log(e.pointIndex)
-        fetch('http://localhost:5000/countries/suicide/Japan', {
+        console.log('click')
+        var index = e.pointIndex
+        var country = anychart.data.set(data).Xb[index].name
+        console.log(e)
+        fetch(`http://localhost:5000/countries/${country}`, {
           method: 'GET',
         }).then(response => response.json())
           .then(data => {
             console.log(data)
-          })
-    };
+            var edu = []
+            var eco = []
+            var suicide = []
 
-    function getData(){
-      var temp = []
-      fetch('http://localhost:5000/countries/worldwide', {
-        method: 'GET',
-      }).then(response => response.json())
-          .then(data => {
-            for (var i = 0; i < data.length; i++) {
-              temp.push(data[i])
+            for (var i = 0; i < data['suicide_collection'].length; i++) {
+              suicide.push([data['suicide_collection'][i]._id, data['suicide_collection'][i].value])
             }
-            console.log(temp)
-          })
-      return temp    
-    }
+
+            for (var i = 0; i < data['economy_collection'].length; i++) {
+              eco.push([data['economy_collection'][i]._id, data['economy_collection'][i].value])
+            }
+
+            for (var i = 0; i < data['education_collection'].length; i++) {
+              edu.push([data['education_collection'][i]._id, data['education_collection'][i].value])
+            }
+
+            var chart = anychart.column(suicide.reverse())
+            // set chart container
+            chart.title('Suicide Rate(per 100,000 people)')
+            chart.bounds(0, 520, '30%', '30%');
+            chart.container(stage);
+            chart.draw()
+
+            var chart_2 = anychart.line()
+            chart_2.spline(eco.reverse());
+
+            chart_2.title('GDP per capita(in USD) of')
+
+            var xAxis = chart_2.xAxis();
+            var eco_marker_1 = chart_2.lineMarker();
+            eco_marker_1.axis(xAxis);
+            eco_marker_1.value(2010);
+
+            var xAxis_1 = chart_2.xAxis();
+            var eco_marker_2 = chart_2.lineMarker();
+            eco_marker_2.axis(xAxis_1)
+            eco_marker_2.value(2000)
+            
+            // set chart container
+            chart_2.bounds(360, 520, '35%', '30%');
+            chart_2.container(stage);
+            chart_2.draw()
+
+            var chart_3 = anychart.line()
+            chart_3.spline(edu.reverse());
+            chart_3.title('Gross enrolment ratio. Tertiary education(%)')
+            chart_3.bounds(780, 520, '35%', '30%');
+            chart_3.container(stage);
+            chart_3.draw()
+
+          }).catch(error => alert('No Record'))
+    };
 
     // add a listener
     map.listen('dblclick', func_listen);
@@ -86,7 +130,7 @@ anychart.onDocumentReady(function() {
     var suicide_data = dataSet.mapAs({
       'value': 'avgration'
     });
-    var series = map.choropleth(dataSet);
+    var series = map.choropleth(suicide_data);
 
     series.labels(false);
 
@@ -101,13 +145,14 @@ anychart.onDocumentReady(function() {
     series.tooltip()
       .useHtml(true)
       .format(function() {
-        return '<span style="color: #d9d9d9">Density</span>: ' +
-          parseFloat(this.value).toLocaleString() + ' pop./km&#178 <br/>' +
-          '<span style="color: #d9d9d9">Population</span>: ' +
-          parseInt(this.getData('id')).toLocaleString() + ' km&#178';
+        return '<span style="color: #d9d9d9">Avgration</span>: ' +
+          parseFloat(this.value).toLocaleString()
+          // '<span style="color: #d9d9d9">Population</span>: ' +
+          // parseInt(this.getData('id')).toLocaleString() + ' km&#178';
       });
 
-    var scale = anychart.scales.ordinalColor([{
+    var scale = anychart.scales.ordinalColor([
+      {
         less: 5
       },
       {
@@ -116,36 +161,49 @@ anychart.onDocumentReady(function() {
       },
       {
         from: 10,
-        to: 15
-      },
-      {
-        from: 15,
         to: 20
       },
       {
-        from: 100,
-        to: 200
+        from: 20,
+        to: 30
       },
       {
-        from: 200,
-        to: 300
+        from: 30,
+        to: 40
       },
       {
-        from: 300,
-        to: 500
-      },
-      {
-        from: 500,
-        to: 1000
-      },
-      {
-        greater: 1000
+        greater: 40
       }
     ]);
-    scale.colors(['#81d4fa', '#4fc3f7', '#29b6f6', '#039be5', '#0288d1', '#0277bd', '#01579b', '#014377', '#000000']);
+    scale.colors(['#81d4fa', '#4fc3f7', '#29b6f6', '#039be5', '#0288d1', '#0277bd']);
+
+    var colors = ['#81d4fa', '#4fc3f7', '#29b6f6', '#039be5', '#0288d1', '#0277bd']
 
     var colorRange = map.colorRange();
-    colorRange.enabled(false)
+
+    colorRange.listen('click', function(e){
+      var index = colors.indexOf(e.domTarget.Vb)
+      var selected = e.target.Y[index]
+      var countries = []
+      for (var i = 0; i < selected.length; i++) {
+        countries.push(dataSet.Xb[selected[i]].name)
+      }
+      console.log(countries)
+      var chart_4 = anychart.column([
+        ["January", 10000],
+        ["February", 12000],
+        ["March", 18000],
+        ["April", 11000],
+        ["May", 9000]
+      ])
+      // set chart container
+      chart_4.title('Suicide Rate(per 100,000 people)')
+      chart_4.bounds(780, 0, '35%', '30%');
+      chart_4.container(stage);
+      chart_4.draw()
+    })
+
+    colorRange.enabled(true)
       .padding([0, 0, 20, 0]);
     colorRange.ticks()
       .enabled(true)
@@ -177,46 +235,15 @@ anychart.onDocumentReady(function() {
     var zoomController = anychart.ui.zoom();
     zoomController.render(map);
 
-    map.bounds(100, 0, '100%', '60%');
+    map.bounds(0, 0, '65%', '60%');
 
     // set container id for the chart
     map.container(stage);
     // initiate chart drawing
     map.draw();
-
-    var chart = anychart.line()
-    chart.spline(
-    // set series data
-    [
-      ['January', 10000],
-      ['February', 12000],
-      ['March', 18000],
-      ['April', 11000],
-      ['May', 9000]
-    ]);
-    
-    // set chart container
-    chart.bounds(0, 520, '45%', '30%');
-    chart.container(stage);
-    chart.draw()
-
-    // anychart.onDocumentReady(function () {
-    // var chart = anychart.line([
-    //     {x: "Meat", value: 10},
-    //     {x: "Fruit", value: 12},
-    //     {x: "Nuts", value: 18},
-    //     {x: "Milk", value: 11},
-    //     {x: "Fish", value: 9}
-    // ]);
-
-    // // Set chart bounds.
-    // chart.bounds(0, 520, '45%', '30%');
-
-    // chart.title("Set chart bounds");
-    // chart.container(stage);
-    // chart.draw();
   });
 })
+
     </script>
 
 </body>
