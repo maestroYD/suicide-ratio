@@ -468,15 +468,17 @@ def get_area():
     result["under_edu_avg"] = 0
     result["above_eco_avg"] = 0
     result["under_eco_avg"] = 0
+    result["global_edu_avg"] = 33.73865653061229
+    result["global_eco_avg"] = 16136
 
     for country in return_dict.keys():
 
-        if return_dict[country]["edu_avg"] >= group_edu_avg:
+        if return_dict[country]["edu_avg"] >= 33.73865653061229:
             result["above_edu_avg"] += 1
         else:
             result["under_edu_avg"] += 1
 
-        if return_dict[country]["eco_avg"] >= group_eco_avg:
+        if return_dict[country]["eco_avg"] >= 16136:
             result["above_eco_avg"] += 1
         else:
             result["under_eco_avg"] += 1
