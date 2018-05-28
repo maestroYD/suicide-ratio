@@ -476,5 +476,5 @@ def get_area():
     return jsonify(result), 200
 
 if __name__ == '__main__':
-    data_loading()
+    #data_loading()
     app.run(debug=False)
