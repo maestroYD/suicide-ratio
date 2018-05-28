@@ -70,34 +70,21 @@ anychart.onDocumentReady(function() {
 
             var chart = anychart.column(suicide.reverse())
             // set chart container
-            chart.title('Suicide Rate(per 100,000 people)')
+            chart.title('Suicide Rate(per 100,000 people) of ' + country)
             chart.bounds(0, 520, '30%', '30%');
             chart.container(stage);
             chart.draw()
 
             var chart_2 = anychart.line()
             chart_2.spline(eco.reverse());
-
-            chart_2.title('GDP per capita(in USD) of')
-
-            var xAxis = chart_2.xAxis();
-            var eco_marker_1 = chart_2.lineMarker();
-            eco_marker_1.axis(xAxis);
-            eco_marker_1.value(2010);
-
-            var xAxis_1 = chart_2.xAxis();
-            var eco_marker_2 = chart_2.lineMarker();
-            eco_marker_2.axis(xAxis_1)
-            eco_marker_2.value(2000)
-            
-            // set chart container
+            chart_2.title('GDP per capita(in USD) of ' + country)
             chart_2.bounds(360, 520, '35%', '30%');
             chart_2.container(stage);
             chart_2.draw()
 
             var chart_3 = anychart.line()
             chart_3.spline(edu.reverse());
-            chart_3.title('Gross enrolment ratio. Tertiary education(%)')
+            chart_3.title('Gross enrolment ratio. Tertiary education(%) of ' + country)
             chart_3.bounds(780, 520, '35%', '30%');
             chart_3.container(stage);
             chart_3.draw()
@@ -208,11 +195,15 @@ anychart.onDocumentReady(function() {
             {x: 'Above Average', value: data['above_eco_avg']},
             {x: 'Under Average', value: data['under_eco_avg']},
           )
-          var eco_avg = 'GDP Avg: ' + data['group_eco_avg']
-          var edu_avg = 'Edu Avg: ' + data['group_edu_avg']
+
+          var world_eco_avg = data['global_eco_avg']
+          var world_edu_avg = data['global_edu_avg']
+
+          var eco_avg = data['group_eco_avg']
+          var edu_avg = data['group_edu_avg']
 
           var label = anychart.standalones.label();
-          label.text(eco_avg);
+          label.text('World gdp Avg: ' + world_eco_avg);
           label.width("100%");
           label.height("100%");
           label.fontColor("#60727b");
@@ -220,7 +211,7 @@ anychart.onDocumentReady(function() {
           label.vAlign("middle");
 
           var label1 = anychart.standalones.label();
-          label1.text(edu_avg);
+          label1.text('World Edu Avg: ' + world_edu_avg);
           label1.width("100%");
           label1.height("100%");
           label1.fontColor("#60727b");
@@ -230,16 +221,31 @@ anychart.onDocumentReady(function() {
           var pi_1 = anychart.pie(eco)
           pi_1.center().content(label);
           pi_1.innerRadius('65%')
-          pi_1.bounds(780, 0, '35%', '30%');
+          pi_1.bounds(735, 0, '25%', '25%');
           pi_1.container(stage)
           pi_1.draw()
 
           var pi_2 = anychart.pie(edu)
           pi_2.center().content(label1)
           pi_2.innerRadius('65%')
-          pi_2.bounds(780, 250, '35%', '30%');
+          pi_2.bounds(735, 250, '25%', '25%');
           pi_2.container(stage)
           pi_2.draw()
+
+          var chart_data = [
+            ['GDP', eco_avg, world_eco_avg],
+            ['Edu', edu_avg, world_edu_avg],
+          ]
+
+          var chart_4 = anychart.column([['Area Avg', eco_avg], ['World Avg', world_eco_avg]]).pointWidth(20)
+          chart_4.bounds(985, 0, '20%', '30%');
+          chart_4.container(stage)
+          chart_4.draw()
+
+          var chart_5 = anychart.column([['Area Avg', edu_avg], ['World Avg', world_edu_avg]]).pointWidth(20)
+          chart_5.bounds(985, 250, '20%', '30%');
+          chart_5.container(stage)
+          chart_5.draw()
         })
     })
 

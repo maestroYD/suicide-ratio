@@ -1,0 +1,1282 @@
+[
+    {
+        "avgration": 16.1325,
+        "id": "UY",
+        "name": "Uruguay"
+    },
+    {
+        "avgration": 7.565,
+        "id": "UZ",
+        "name": "Uzbekistan"
+    },
+    {
+        "avgration": 6.9525,
+        "id": "VN",
+        "name": "Vietnam"
+    },
+    {
+        "avgration": 0,
+        "id": "EH",
+        "name": "Western Sahara"
+    },
+    {
+        "avgration": 0,
+        "id": "AX",
+        "name": "Åland Islands"
+    },
+    {
+        "avgration": 12.7725,
+        "id": "RO",
+        "name": "Romania"
+    },
+    {
+        "avgration": 29.527500000000003,
+        "id": "RU",
+        "name": "Russia"
+    },
+    {
+        "avgration": 9.7675,
+        "id": "RW",
+        "name": "Rwanda"
+    },
+    {
+        "avgration": 3.1399999999999997,
+        "id": "SA",
+        "name": "Saudi Arabia"
+    },
+    {
+        "avgration": 18.405,
+        "id": "RS",
+        "name": "Serbia"
+    },
+    {
+        "avgration": 9.2075,
+        "id": "SC",
+        "name": "Seychelles"
+    },
+    {
+        "avgration": 13.5125,
+        "id": "SK",
+        "name": "Slovakia"
+    },
+    {
+        "avgration": 25.07,
+        "id": "SI",
+        "name": "Slovenia"
+    },
+    {
+        "avgration": 9.1275,
+        "id": "SB",
+        "name": "Solomon Islands"
+    },
+    {
+        "avgration": 0,
+        "id": "GS",
+        "name": "South Georgia & South Sandwich Islands"
+    },
+    {
+        "avgration": 27.015,
+        "id": "KR",
+        "name": "South Korea"
+    },
+    {
+        "avgration": 7.895,
+        "id": "ES",
+        "name": "Spain"
+    },
+    {
+        "avgration": 5.645,
+        "id": "LC",
+        "name": "St. Lucia"
+    },
+    {
+        "avgration": 27.112500000000004,
+        "id": "SR",
+        "name": "Suriname"
+    },
+    {
+        "avgration": 15.385000000000002,
+        "id": "SZ",
+        "name": "Swaziland"
+    },
+    {
+        "avgration": 15.17,
+        "id": "SE",
+        "name": "Sweden"
+    },
+    {
+        "avgration": 17.38,
+        "id": "CH",
+        "name": "Switzerland"
+    },
+    {
+        "avgration": 2.1975000000000002,
+        "id": "SY",
+        "name": "Syria"
+    },
+    {
+        "avgration": 1.9875000000000003,
+        "id": "ST",
+        "name": "São Tomé & Príncipe"
+    },
+    {
+        "avgration": 0,
+        "id": "TW",
+        "name": "Taiwan"
+    },
+    {
+        "avgration": 4.035,
+        "id": "TJ",
+        "name": "Tajikistan"
+    },
+    {
+        "avgration": 7.1275,
+        "id": "TZ",
+        "name": "Tanzania"
+    },
+    {
+        "avgration": 13.877499999999998,
+        "id": "TH",
+        "name": "Thailand"
+    },
+    {
+        "avgration": 8.2575,
+        "id": "TL",
+        "name": "Timor-Leste"
+    },
+    {
+        "avgration": 9.6075,
+        "id": "TG",
+        "name": "Togo"
+    },
+    {
+        "avgration": 3.5975,
+        "id": "TO",
+        "name": "Tonga"
+    },
+    {
+        "avgration": 12.972499999999998,
+        "id": "TT",
+        "name": "Trinidad & Tobago"
+    },
+    {
+        "avgration": 0,
+        "id": "TA",
+        "name": "Tristan da Cunha"
+    },
+    {
+        "avgration": 5.0525,
+        "id": "TN",
+        "name": "Tunisia"
+    },
+    {
+        "avgration": 10.9975,
+        "id": "TR",
+        "name": "Turkey"
+    },
+    {
+        "avgration": 9.9375,
+        "id": "TM",
+        "name": "Turkmenistan"
+    },
+    {
+        "avgration": 0,
+        "id": "TC",
+        "name": "Turks & Caicos Islands"
+    },
+    {
+        "avgration": 0,
+        "id": "TV",
+        "name": "Tuvalu"
+    },
+    {
+        "avgration": 0,
+        "id": "UM",
+        "name": "U.S. Outlying Islands"
+    },
+    {
+        "avgration": 0,
+        "id": "VI",
+        "name": "U.S. Virgin Islands"
+    },
+    {
+        "avgration": 7.055,
+        "id": "UG",
+        "name": "Uganda"
+    },
+    {
+        "avgration": 26.410000000000004,
+        "id": "UA",
+        "name": "Ukraine"
+    },
+    {
+        "avgration": 3.4250000000000003,
+        "id": "AE",
+        "name": "United Arab Emirates"
+    },
+    {
+        "avgration": 8.2475,
+        "id": "GB",
+        "name": "United Kingdom"
+    },
+    {
+        "avgration": 12.43,
+        "id": "US",
+        "name": "United States"
+    },
+    {
+        "avgration": 7.130000000000001,
+        "id": "VU",
+        "name": "Vanuatu"
+    },
+    {
+        "avgration": 0,
+        "id": "VA",
+        "name": "Vatican City"
+    },
+    {
+        "avgration": 4.935,
+        "id": "VE",
+        "name": "Venezuela"
+    },
+    {
+        "avgration": 0,
+        "id": "WF",
+        "name": "Wallis & Futuna"
+    },
+    {
+        "avgration": 6.8125,
+        "id": "ZM",
+        "name": "Zambia"
+    },
+    {
+        "avgration": 11.280000000000001,
+        "id": "ZW",
+        "name": "Zimbabwe"
+    },
+    {
+        "avgration": 0,
+        "id": "AI",
+        "name": "Anguilla"
+    },
+    {
+        "avgration": 0,
+        "id": "AQ",
+        "name": "Antarctica"
+    },
+    {
+        "avgration": 1.0397500000000002,
+        "id": "AG",
+        "name": "Antigua & Barbuda"
+    },
+    {
+        "avgration": 0,
+        "id": "AC",
+        "name": "Ascension Island"
+    },
+    {
+        "avgration": 12.2715,
+        "id": "AU",
+        "name": "Australia"
+    },
+    {
+        "avgration": 17.31175,
+        "id": "AT",
+        "name": "Austria"
+    },
+    {
+        "avgration": 3.18375,
+        "id": "AZ",
+        "name": "Azerbaijan"
+    },
+    {
+        "avgration": 1.4942499999999999,
+        "id": "BS",
+        "name": "Bahamas"
+    },
+    {
+        "avgration": 6.253,
+        "id": "BH",
+        "name": "Bahrain"
+    },
+    {
+        "avgration": 6.395,
+        "id": "BD",
+        "name": "Bangladesh"
+    },
+    {
+        "avgration": 1.6144999999999998,
+        "id": "BB",
+        "name": "Barbados"
+    },
+    {
+        "avgration": 32.146,
+        "id": "BY",
+        "name": "Belarus"
+    },
+    {
+        "avgration": 20.996250000000003,
+        "id": "BE",
+        "name": "Belgium"
+    },
+    {
+        "avgration": 6.6137500000000005,
+        "id": "BZ",
+        "name": "Belize"
+    },
+    {
+        "avgration": 8.965,
+        "id": "BJ",
+        "name": "Benin"
+    },
+    {
+        "avgration": 0,
+        "id": "BM",
+        "name": "Bermuda"
+    },
+    {
+        "avgration": 12.109750000000002,
+        "id": "BT",
+        "name": "Bhutan"
+    },
+    {
+        "avgration": 21.228,
+        "id": "BO",
+        "name": "Bolivia"
+    },
+    {
+        "avgration": 7.453,
+        "id": "BA",
+        "name": "Bosnia & Herzegovina"
+    },
+    {
+        "avgration": 10.6295,
+        "id": "BW",
+        "name": "Botswana"
+    },
+    {
+        "avgration": 0,
+        "id": "BV",
+        "name": "Bouvet Island"
+    },
+    {
+        "avgration": 5.8215,
+        "id": "BR",
+        "name": "Brazil"
+    },
+    {
+        "avgration": 0,
+        "id": "IO",
+        "name": "British Indian Ocean Territory"
+    },
+    {
+        "avgration": 0,
+        "id": "VG",
+        "name": "British Virgin Islands"
+    },
+    {
+        "avgration": 1.228,
+        "id": "BN",
+        "name": "Brunei"
+    },
+    {
+        "avgration": 17.232,
+        "id": "BG",
+        "name": "Bulgaria"
+    },
+    {
+        "avgration": 9.09,
+        "id": "BF",
+        "name": "Burkina Faso"
+    },
+    {
+        "avgration": 8.28125,
+        "id": "BI",
+        "name": "Burundi"
+    },
+    {
+        "avgration": 11.558499999999999,
+        "id": "KH",
+        "name": "Cambodia"
+    },
+    {
+        "avgration": 11.44925,
+        "id": "CM",
+        "name": "Cameroon"
+    },
+    {
+        "avgration": 12.4955,
+        "id": "CA",
+        "name": "Canada"
+    },
+    {
+        "avgration": 0,
+        "id": "IC",
+        "name": "Canary Islands"
+    },
+    {
+        "avgration": 8.617,
+        "id": "CV",
+        "name": "Cape Verde"
+    },
+    {
+        "avgration": 0,
+        "id": "BQ",
+        "name": "Caribbean Netherlands"
+    },
+    {
+        "avgration": 0,
+        "id": "KY",
+        "name": "Cayman Islands"
+    },
+    {
+        "avgration": 16.406,
+        "id": "CF",
+        "name": "Central African Republic"
+    },
+    {
+        "avgration": 0,
+        "id": "EA",
+        "name": "Ceuta & Melilla"
+    },
+    {
+        "avgration": 7.848749999999999,
+        "id": "TD",
+        "name": "Chad"
+    },
+    {
+        "avgration": 10.76275,
+        "id": "CL",
+        "name": "Chile"
+    },
+    {
+        "avgration": 10.184249999999999,
+        "id": "CN",
+        "name": "China"
+    },
+    {
+        "avgration": 0,
+        "id": "CX",
+        "name": "Christmas Island"
+    },
+    {
+        "avgration": 0,
+        "id": "CP",
+        "name": "Clipperton Island"
+    },
+    {
+        "avgration": 0,
+        "id": "CC",
+        "name": "Cocos (Keeling) Islands"
+    },
+    {
+        "avgration": 6.0672500000000005,
+        "id": "CO",
+        "name": "Colombia"
+    },
+    {
+        "avgration": 7.59575,
+        "id": "KM",
+        "name": "Comoros"
+    },
+    {
+        "avgration": 12.37225,
+        "id": "CG",
+        "name": "Congo - Brazzaville"
+    },
+    {
+        "avgration": 10.036999999999999,
+        "id": "CD",
+        "name": "Congo - Kinshasa"
+    },
+    {
+        "avgration": 0,
+        "id": "CK",
+        "name": "Cook Islands"
+    },
+    {
+        "avgration": 7.75675,
+        "id": "CR",
+        "name": "Costa Rica"
+    },
+    {
+        "avgration": 19.243,
+        "id": "HR",
+        "name": "Croatia"
+    },
+    {
+        "avgration": 14.502500000000001,
+        "id": "CU",
+        "name": "Cuba"
+    },
+    {
+        "avgration": 0,
+        "id": "CW",
+        "name": "Curaçao"
+    },
+    {
+        "avgration": 3.3674999999999997,
+        "id": "CY",
+        "name": "Cyprus"
+    },
+    {
+        "avgration": 15.295,
+        "id": "CZ",
+        "name": "Czechia"
+    },
+    {
+        "avgration": 0,
+        "id": "CI",
+        "name": "Côte d’Ivoire"
+    },
+    {
+        "avgration": 13.5275,
+        "id": "DK",
+        "name": "Denmark"
+    },
+    {
+        "avgration": 0,
+        "id": "DG",
+        "name": "Diego Garcia"
+    },
+    {
+        "avgration": 8.2175,
+        "id": "DJ",
+        "name": "Djibouti"
+    },
+    {
+        "avgration": 0,
+        "id": "DM",
+        "name": "Dominica"
+    },
+    {
+        "avgration": 7.2275,
+        "id": "DO",
+        "name": "Dominican Republic"
+    },
+    {
+        "avgration": 8.0525,
+        "id": "EC",
+        "name": "Ecuador"
+    },
+    {
+        "avgration": 2.6525000000000003,
+        "id": "EG",
+        "name": "Egypt"
+    },
+    {
+        "avgration": 13.315,
+        "id": "SV",
+        "name": "El Salvador"
+    },
+    {
+        "avgration": 22.4775,
+        "id": "GQ",
+        "name": "Equatorial Guinea"
+    },
+    {
+        "avgration": 8.1275,
+        "id": "ER",
+        "name": "Eritrea"
+    },
+    {
+        "avgration": 22.6475,
+        "id": "EE",
+        "name": "Estonia"
+    },
+    {
+        "avgration": 8.35,
+        "id": "ET",
+        "name": "Ethiopia"
+    },
+    {
+        "avgration": 0,
+        "id": "FK",
+        "name": "Falkland Islands (Islas Malvinas)"
+    },
+    {
+        "avgration": 0,
+        "id": "FO",
+        "name": "Faroe Islands"
+    },
+    {
+        "avgration": 8.9825,
+        "id": "FJ",
+        "name": "Fiji"
+    },
+    {
+        "avgration": 19.7575,
+        "id": "FI",
+        "name": "Finland"
+    },
+    {
+        "avgration": 18.652499999999996,
+        "id": "FR",
+        "name": "France"
+    },
+    {
+        "avgration": 0,
+        "id": "GF",
+        "name": "French Guiana"
+    },
+    {
+        "avgration": 0,
+        "id": "PF",
+        "name": "French Polynesia"
+    },
+    {
+        "avgration": 0,
+        "id": "TF",
+        "name": "French Southern Territories"
+    },
+    {
+        "avgration": 10.5575,
+        "id": "GA",
+        "name": "Gabon"
+    },
+    {
+        "avgration": 6.7425,
+        "id": "GM",
+        "name": "Gambia"
+    },
+    {
+        "avgration": 5.965,
+        "id": "GE",
+        "name": "Georgia"
+    },
+    {
+        "avgration": 13.7675,
+        "id": "DE",
+        "name": "Germany"
+    },
+    {
+        "avgration": 6.4775,
+        "id": "GH",
+        "name": "Ghana"
+    },
+    {
+        "avgration": 0,
+        "id": "GI",
+        "name": "Gibraltar"
+    },
+    {
+        "avgration": 4.0200000000000005,
+        "id": "GR",
+        "name": "Greece"
+    },
+    {
+        "avgration": 0,
+        "id": "GL",
+        "name": "Greenland"
+    },
+    {
+        "avgration": 1.3199999999999998,
+        "id": "GD",
+        "name": "Grenada"
+    },
+    {
+        "avgration": 0,
+        "id": "GP",
+        "name": "Guadeloupe"
+    },
+    {
+        "avgration": 0,
+        "id": "GU",
+        "name": "Guam"
+    },
+    {
+        "avgration": 3.1775,
+        "id": "GT",
+        "name": "Guatemala"
+    },
+    {
+        "avgration": 0,
+        "id": "GG",
+        "name": "Guernsey"
+    },
+    {
+        "avgration": 7.390000000000001,
+        "id": "GN",
+        "name": "Guinea"
+    },
+    {
+        "avgration": 6.6925,
+        "id": "GW",
+        "name": "Guinea-Bissau"
+    },
+    {
+        "avgration": 25.255000000000003,
+        "id": "GY",
+        "name": "Guyana"
+    },
+    {
+        "avgration": 9.555,
+        "id": "HT",
+        "name": "Haiti"
+    },
+    {
+        "avgration": 0,
+        "id": "HM",
+        "name": "Heard & McDonald Islands"
+    },
+    {
+        "avgration": 3.5225,
+        "id": "HN",
+        "name": "Honduras"
+    },
+    {
+        "avgration": 0,
+        "id": "HK",
+        "name": "Hong Kong"
+    },
+    {
+        "avgration": 26.4425,
+        "id": "HU",
+        "name": "Hungary"
+    },
+    {
+        "avgration": 12.9325,
+        "id": "IS",
+        "name": "Iceland"
+    },
+    {
+        "avgration": 17.0125,
+        "id": "IN",
+        "name": "India"
+    },
+    {
+        "avgration": 3.0725000000000002,
+        "id": "ID",
+        "name": "Indonesia"
+    },
+    {
+        "avgration": 7.035,
+        "id": "IR",
+        "name": "Iran"
+    },
+    {
+        "avgration": 2.71,
+        "id": "IQ",
+        "name": "Iraq"
+    },
+    {
+        "avgration": 11.83,
+        "id": "IE",
+        "name": "Ireland"
+    },
+    {
+        "avgration": 0,
+        "id": "IM",
+        "name": "Isle of Man"
+    },
+    {
+        "avgration": 6.7025,
+        "id": "IL",
+        "name": "Israel"
+    },
+    {
+        "avgration": 7.405,
+        "id": "IT",
+        "name": "Italy"
+    },
+    {
+        "avgration": 1.0174999999999998,
+        "id": "JM",
+        "name": "Jamaica"
+    },
+    {
+        "avgration": 23.2475,
+        "id": "JP",
+        "name": "Japan"
+    },
+    {
+        "avgration": 0,
+        "id": "JE",
+        "name": "Jersey"
+    },
+    {
+        "avgration": 3.41,
+        "id": "JO",
+        "name": "Jordan"
+    },
+    {
+        "avgration": 30.66,
+        "id": "KZ",
+        "name": "Kazakhstan"
+    },
+    {
+        "avgration": 6.672499999999999,
+        "id": "KE",
+        "name": "Kenya"
+    },
+    {
+        "avgration": 14.635,
+        "id": "KI",
+        "name": "Kiribati"
+    },
+    {
+        "avgration": 0,
+        "id": "XK",
+        "name": "Kosovo"
+    },
+    {
+        "avgration": 3.1950000000000003,
+        "id": "KW",
+        "name": "Kuwait"
+    },
+    {
+        "avgration": 9.792499999999999,
+        "id": "KG",
+        "name": "Kyrgyzstan"
+    },
+    {
+        "avgration": 13.200000000000001,
+        "id": "LA",
+        "name": "Laos"
+    },
+    {
+        "avgration": 27.19,
+        "id": "LV",
+        "name": "Latvia"
+    },
+    {
+        "avgration": 2.9799999999999995,
+        "id": "LB",
+        "name": "Lebanon"
+    },
+    {
+        "avgration": 11.2225,
+        "id": "LS",
+        "name": "Lesotho"
+    },
+    {
+        "avgration": 6.305,
+        "id": "LR",
+        "name": "Liberia"
+    },
+    {
+        "avgration": 5.942500000000001,
+        "id": "LY",
+        "name": "Libya"
+    },
+    {
+        "avgration": 0,
+        "id": "LI",
+        "name": "Liechtenstein"
+    },
+    {
+        "avgration": 39.49,
+        "id": "LT",
+        "name": "Lithuania"
+    },
+    {
+        "avgration": 13.0175,
+        "id": "LU",
+        "name": "Luxembourg"
+    },
+    {
+        "avgration": 0,
+        "id": "MO",
+        "name": "Macau"
+    },
+    {
+        "avgration": 7.295,
+        "id": "MK",
+        "name": "Macedonia (FYROM)"
+    },
+    {
+        "avgration": 5.1475,
+        "id": "MG",
+        "name": "Madagascar"
+    },
+    {
+        "avgration": 5.735,
+        "id": "MW",
+        "name": "Malawi"
+    },
+    {
+        "avgration": 5.5825,
+        "id": "MY",
+        "name": "Malaysia"
+    },
+    {
+        "avgration": 11.12,
+        "id": "MV",
+        "name": "Maldives"
+    },
+    {
+        "avgration": 5.8125,
+        "id": "ML",
+        "name": "Mali"
+    },
+    {
+        "avgration": 6.375,
+        "id": "MT",
+        "name": "Malta"
+    },
+    {
+        "avgration": 0,
+        "id": "MH",
+        "name": "Marshall Islands"
+    },
+    {
+        "avgration": 0,
+        "id": "MQ",
+        "name": "Martinique"
+    },
+    {
+        "avgration": 5.325,
+        "id": "MR",
+        "name": "Mauritania"
+    },
+    {
+        "avgration": 9.83,
+        "id": "MU",
+        "name": "Mauritius"
+    },
+    {
+        "avgration": 0,
+        "id": "YT",
+        "name": "Mayotte"
+    },
+    {
+        "avgration": 4.12,
+        "id": "MX",
+        "name": "Mexico"
+    },
+    {
+        "avgration": 11.21,
+        "id": "FM",
+        "name": "Micronesia"
+    },
+    {
+        "avgration": 18.0525,
+        "id": "MD",
+        "name": "Moldova"
+    },
+    {
+        "avgration": 0,
+        "id": "MC",
+        "name": "Monaco"
+    },
+    {
+        "avgration": 29.957500000000003,
+        "id": "MN",
+        "name": "Mongolia"
+    },
+    {
+        "avgration": 11.120000000000001,
+        "id": "ME",
+        "name": "Montenegro"
+    },
+    {
+        "avgration": 0,
+        "id": "MS",
+        "name": "Montserrat"
+    },
+    {
+        "avgration": 6.4975000000000005,
+        "id": "MA",
+        "name": "Morocco"
+    },
+    {
+        "avgration": 8.9225,
+        "id": "MZ",
+        "name": "Mozambique"
+    },
+    {
+        "avgration": 3.72225,
+        "id": "MM",
+        "name": "Myanmar (Burma)"
+    },
+    {
+        "avgration": 8.86,
+        "id": "NA",
+        "name": "Namibia"
+    },
+    {
+        "avgration": 0,
+        "id": "NR",
+        "name": "Nauru"
+    },
+    {
+        "avgration": 7.1925,
+        "id": "NP",
+        "name": "Nepal"
+    },
+    {
+        "avgration": 10.307500000000001,
+        "id": "NL",
+        "name": "Netherlands"
+    },
+    {
+        "avgration": 0,
+        "id": "NC",
+        "name": "New Caledonia"
+    },
+    {
+        "avgration": 12.682500000000001,
+        "id": "NZ",
+        "name": "New Zealand"
+    },
+    {
+        "avgration": 12.47,
+        "id": "NI",
+        "name": "Nicaragua"
+    },
+    {
+        "avgration": 4.5200000000000005,
+        "id": "NE",
+        "name": "Niger"
+    },
+    {
+        "avgration": 9.77,
+        "id": "NG",
+        "name": "Nigeria"
+    },
+    {
+        "avgration": 0,
+        "id": "NU",
+        "name": "Niue"
+    },
+    {
+        "avgration": 0,
+        "id": "NF",
+        "name": "Norfolk Island"
+    },
+    {
+        "avgration": 18.7025,
+        "id": "KP",
+        "name": "North Korea"
+    },
+    {
+        "avgration": 0,
+        "id": "MP",
+        "name": "Northern Mariana Islands"
+    },
+    {
+        "avgration": 11.9175,
+        "id": "NO",
+        "name": "Norway"
+    },
+    {
+        "avgration": 4.885,
+        "id": "OM",
+        "name": "Oman"
+    },
+    {
+        "avgration": 2.2675,
+        "id": "PK",
+        "name": "Pakistan"
+    },
+    {
+        "avgration": 0,
+        "id": "PW",
+        "name": "Palau"
+    },
+    {
+        "avgration": 0,
+        "id": "PS",
+        "name": "Palestine"
+    },
+    {
+        "avgration": 6.199999999999999,
+        "id": "PA",
+        "name": "Panama"
+    },
+    {
+        "avgration": 9.9725,
+        "id": "PG",
+        "name": "Papua New Guinea"
+    },
+    {
+        "avgration": 10.2225,
+        "id": "PY",
+        "name": "Paraguay"
+    },
+    {
+        "avgration": 6.182499999999999,
+        "id": "PE",
+        "name": "Peru"
+    },
+    {
+        "avgration": 3.1825,
+        "id": "PH",
+        "name": "Philippines"
+    },
+    {
+        "avgration": 0,
+        "id": "PN",
+        "name": "Pitcairn Islands"
+    },
+    {
+        "avgration": 22.104999999999997,
+        "id": "PL",
+        "name": "Poland"
+    },
+    {
+        "avgration": 11.3525,
+        "id": "PT",
+        "name": "Portugal"
+    },
+    {
+        "avgration": 0,
+        "id": "PR",
+        "name": "Puerto Rico"
+    },
+    {
+        "avgration": 5.065,
+        "id": "QA",
+        "name": "Qatar"
+    },
+    {
+        "avgration": 0,
+        "id": "RE",
+        "name": "Réunion"
+    },
+    {
+        "avgration": 7.06,
+        "id": "WS",
+        "name": "Samoa"
+    },
+    {
+        "avgration": 0,
+        "id": "SM",
+        "name": "San Marino"
+    },
+    {
+        "avgration": 7.315,
+        "id": "SN",
+        "name": "Senegal"
+    },
+    {
+        "avgration": 15.549999999999999,
+        "id": "SL",
+        "name": "Sierra Leone"
+    },
+    {
+        "avgration": 11,
+        "id": "SG",
+        "name": "Singapore"
+    },
+    {
+        "avgration": 0,
+        "id": "SX",
+        "name": "Sint Maarten"
+    },
+    {
+        "avgration": 5.2825,
+        "id": "SO",
+        "name": "Somalia"
+    },
+    {
+        "avgration": 10.17,
+        "id": "ZA",
+        "name": "South Africa"
+    },
+    {
+        "avgration": 6.859999999999999,
+        "id": "SS",
+        "name": "South Sudan"
+    },
+    {
+        "avgration": 32.731,
+        "id": "LK",
+        "name": "Sri Lanka"
+    },
+    {
+        "avgration": 0,
+        "id": "BL",
+        "name": "St. Barthélemy"
+    },
+    {
+        "avgration": 0,
+        "id": "SH",
+        "name": "St. Helena"
+    },
+    {
+        "avgration": 0,
+        "id": "KN",
+        "name": "St. Kitts & Nevis"
+    },
+    {
+        "avgration": 0,
+        "id": "MF",
+        "name": "St. Martin"
+    },
+    {
+        "avgration": 0,
+        "id": "PM",
+        "name": "St. Pierre & Miquelon"
+    },
+    {
+        "avgration": 5.41,
+        "id": "VC",
+        "name": "St. Vincent & Grenadines"
+    },
+    {
+        "avgration": 10.690000000000001,
+        "id": "SD",
+        "name": "Sudan"
+    },
+    {
+        "avgration": 0,
+        "id": "SJ",
+        "name": "Svalbard & Jan Mayen"
+    },
+    {
+        "avgration": 0,
+        "id": "TK",
+        "name": "Tokelau"
+    },
+    {
+        "avgration": 5.219249999999999,
+        "id": "AF",
+        "name": "Afghanistan"
+    },
+    {
+        "avgration": 5.471,
+        "id": "AL",
+        "name": "Albania"
+    },
+    {
+        "avgration": 3.2832500000000002,
+        "id": "DZ",
+        "name": "Algeria"
+    },
+    {
+        "avgration": 7.06,
+        "id": "AS",
+        "name": "American Samoa"
+    },
+    {
+        "avgration": 0,
+        "id": "AD",
+        "name": "Andorra"
+    },
+    {
+        "avgration": 19.8855,
+        "id": "AO",
+        "name": "Angola"
+    },
+    {
+        "avgration": 13.161,
+        "id": "AR",
+        "name": "Argentina"
+    },
+    {
+        "avgration": 4.7565,
+        "id": "AM",
+        "name": "Armenia"
+    },
+    {
+        "avgration": 0,
+        "id": "AW",
+        "name": "Aruba"
+    },
+    {
+        "avgration": 7.9275,
+        "id": "YE",
+        "name": "Yemen"
+    }
+]
