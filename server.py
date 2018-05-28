@@ -378,6 +378,100 @@ def get_analyze(country_name):
 
     return jsonify(return_dict), 200
 
+
+@app.route("/countries/analysis/area", methods=['GET'])
+def get_area():
+
+    country_list = request.args.get("country_list")[1:-1].split(", ")
+    country_list_clean = []
+
+    for i in country_list:
+        country_list_clean.append(i[1:-1])
+
+    country_list = country_list_clean
+
+    # print(country_list)
+
+    client = MongoClient('mongodb://ass3:123456@ds229290.mlab.com:29290/ass3')
+
+    db = client['ass3']
+    # print(db.collection_names()) 
+    collection = db["country"]
+
+    return_dict = {}
+
+    for c in country_list:
+        return_dict[c] = {}
+
+        # print(c)
+
+        country_norm = c.replace(' ','').lower()
+
+        edu_sum = []
+        eco_sum = []
+
+        if collection.find({"name" : country_norm }).count():
+            for doc in collection.find({"name" : country_norm }):
+                edu_sum = []
+                eco_sum = []
+                for item in doc["education_collection"]:
+                    edu_sum.append(item["value"])
+                for item in doc["economy_collection"]:
+                    eco_sum.append(item["value"])
+            return_dict[c]["name"] = c
+
+            if len(edu_sum) == 0:
+                return_dict[c]["edu_avg"] = 0
+            else:
+                return_dict[c]["edu_avg"] = sum(edu_sum)/len(edu_sum)
+
+            if len(eco_sum) == 0:
+                return_dict[c]["eco_avg"] = 0
+            else:
+
+                return_dict[c]["eco_avg"] = sum(eco_sum)/len(eco_sum)
+        else:
+            continue
+
+    group_edu = []
+    group_eco = []
+
+    for country in return_dict.keys():
+        if return_dict[country]["edu_avg"]:
+            group_edu.append(return_dict[country]["edu_avg"])
+        else:
+            continue
+
+        if return_dict[country]["eco_avg"]:
+            group_eco.append(return_dict[country]["eco_avg"])
+        else:
+            continue
+
+    group_edu_avg = sum(group_edu)/len(group_edu)
+    group_eco_avg = sum(group_eco)/len(group_eco)
+
+    result = {}
+    result["group_edu_avg"] = sum(group_edu)/len(group_edu)
+    result["group_eco_avg"] = sum(group_eco)/len(group_eco)
+    result["above_edu_avg"] = 0
+    result["under_edu_avg"] = 0
+    result["above_eco_avg"] = 0
+    result["under_eco_avg"] = 0
+
+    for country in return_dict.keys():
+
+        if return_dict[country]["edu_avg"] >= group_edu_avg:
+            result["above_edu_avg"] += 1
+        else:
+            result["under_edu_avg"] += 1
+
+        if return_dict[country]["eco_avg"] >= group_eco_avg:
+            result["above_eco_avg"] += 1
+        else:
+            result["under_eco_avg"] += 1
+
+    return jsonify(result), 200
+
 if __name__ == '__main__':
     data_loading()
     app.run(debug=False)
